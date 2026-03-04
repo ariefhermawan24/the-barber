@@ -88,7 +88,8 @@ body {
     margin-left: 68px;
     display: flex;
     gap: 25px;
-    list-style: none;
+    list-style: none !important;
+    text-decoration: none !important;
 }
 
 .nav-links li a {

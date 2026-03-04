@@ -331,59 +331,50 @@ section {
 
 .menu-toggle {
     position: relative;
-    width: 40px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background: transparent;
     cursor: pointer;
     display: none;
 }
 
 .menu-toggle span {
-    display: none;
+    display: block;
     position: absolute;
-    height: 4px;
+    height: 2.5px;
     width: 100%;
     background: white;
-    border-radius: 9px;
-    opacity: 1;
+    border-radius: 6px;
     left: 0;
-    transform: rotate(0deg);
     transition: 0.25s ease-in-out;
 }
 
 .menu-toggle span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
+    top: 4px;
 }
 
 .menu-toggle span:nth-of-type(2) {
     top: 50%;
     transform: translateY(-50%);
-    transform-origin: left center;
 }
 
 .menu-toggle span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
+    bottom: 4px;
 }
 
-/* Animasi saat menu terbuka */
 .menu-toggle.open span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .menu-toggle.open span:nth-of-type(2) {
-    width: 0%;
     opacity: 0;
+    width: 0%;
 }
 
 .menu-toggle.open span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
 }
 
 

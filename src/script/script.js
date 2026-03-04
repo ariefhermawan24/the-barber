@@ -1,7 +1,10 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const navbar = document.getElementById("navbar");
-const navItems = document.querySelectorAll(".nav-links li a"); // semua link
+const navItems = document.querySelectorAll(
+    ".navbar a[href^='#'], .hero-nav-links a[href^='#']"
+);
+const logoLink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section"); // semua section di page
 const fabMain = document.getElementById("fab-main");
 const fabActions = document.querySelector(".fab-actions");
@@ -126,4 +129,45 @@ navItems.forEach(link => {
             }, 350);
         }
     });
+});
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 130;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.id;
+        }
+    });
+
+    // Reset semua nav link
+    navItems.forEach(link => {
+        link.classList.remove("active-link");
+    });
+
+    // Reset logo
+    if (logoLink) {
+        logoLink.classList.remove("active-link");
+    }
+
+    // Aktifkan nav biasa
+    navItems.forEach(link => {
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active-link");
+        }
+    });
+
+    // 🔥 Aktifkan logo kalau di section home / paling atas
+    if (current === "home" || window.scrollY < 50) {
+        if (logoLink) {
+            logoLink.classList.add("active-link");
+        }
+    }
 });
