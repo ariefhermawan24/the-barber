@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Barber | Barbershop</title>
+    <link rel="icon" type="image/x-icon" href="./src/gambar/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Navbar Transparan -->
+        <div class="hero-navbar">
+            <div class="logo-brand">
+                <img src="./src/gambar/logo.png" alt="The Barber Logo" class="logo-icon">
+                <span class="brand-name">The Barber</span>
+            </div>
+            <ul class="hero-nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#pricelist">Pricelist</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./src/video/hero-background.mp4" type="video/mp4">
+            your browser not support tag video.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+           <h1 class="hero-title">The Barber</h1>
+            <p class="hero-subtitle">Crafting Your Look with Precision.</p>
+
+            <div class="hero-buttons">
+                <a href="./reservation" class="hero-btn primary"><i class="fas fa-calendar-check"></i> Reservation</a>
+                <a href="#member" class="hero-btn secondary"><i class="fas fa-id-card"></i> Member</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="tel:+628123456789" class="social-btn"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://instagram.com/thebarber" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:thebarber@email.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="social-btn">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://maps.google.com/?q=The+Barber+Location" target="_blank" class="social-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <nav class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <img src="./src/gambar/logo.png" alt="The Barber Logo" class="logo-icon">
+            <span>The Barber</span>
+        </a>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#pricelist">Pricelist</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Tambahan tombol aksi -->
+        <div class="nav-actions">
+            <a href="./reservation" class="btn-reservasi">
+                <i class="fas fa-calendar-check"></i>
+                <p>Reservation</p>
+            </a>
+            <a href="#member" class="btn-member">
+                <i class="fas fa-user"></i>
+                <p>Member</p>
+            </a>
+        </div>
+    </nav>
+
+    <!-- FAB Action -->
+    <div class="fab-container">
+        <button class="fab-main" id="fab-main">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-actions">
+            <a href="./reservation" class="fab-btn">
+                <i class="fas fa-calendar-check"></i>
+            </a>
+            <a href="#member" class="fab-btn">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Page 2 - About -->
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <!-- Kiri: Teks -->
+            <div class="about-text scroll-animate">
+                <h2>About US</h2>
+                <p class="scroll-animate">
+                    At The Barber, we deliver an <strong>exclusive haircut experience</strong> designed for maximum
+                    comfort.
+                    With our team of seasoned professionals, we believe that <em>every haircut is a true work of
+                        art</em>.
+                </p>
+                <p class="scroll-animate">
+                    We use only premium products, modern tools, and timeless techniques blended with the latest trends.
+                    The result? A style that <strong>reflects your character and enhances your confidence</strong>.
+                </p>
+                <p class="scroll-animate">
+                    Beyond haircuts, we offer a <strong>complete grooming experience</strong> — including shaving,
+                    styling, and hair treatments,
+                    all within an atmosphere of elegance and comfort.
+                </p>
+
+            </div>
+
+            <!-- Kanan: Foto -->
+            <div class="about-images scroll-animate">
+                <div class="img-grid">
+                    <img class="scroll-animate" src="./src/gambar/kursi-preview.png" alt="Barber Chair">
+                    <img class="scroll-animate" src="./src/gambar/barber-preview.png" alt="Professional Barber">
+                    <img class="scroll-animate" src="./src/gambar/barbershop-preview.png" alt="Luxury Interior">
+                    <img class="scroll-animate" src="./src/gambar/barberwork-preview.png" alt="Haircut Style">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+        <div class="services-content">
+            <h2 class="section-title scroll-animate">Our Service</h2>
+            <div class="service-grid">
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-scissors"></i>
+                    <h3>Modern Haircut</h3>
+                    <p>Tailored contemporary cuts designed to enhance your personal style and character.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Premium Shaving</h3>
+                    <p>A classic shaving ritual with warm towels, essential oils, and precision blades for a refined
+                        finish.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-palette"></i>
+                    <h3>Hair Coloring</h3>
+                    <p>Professional coloring options that bring out bold sophistication and timeless elegance.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-spa"></i>
+                    <h3>Facial Treatment</h3>
+                    <p>A rejuvenating facial ritual to keep your skin refreshed, purified, and impeccably cared for.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-hands-bubbles"></i>
+                    <h3>Creambath & Scalp Massage</h3>
+                    <p>Indulgent relaxation with nourishing creambath and gentle scalp massage for ultimate comfort.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Grooming Package</h3>
+                    <p>A complete luxury package including haircut, shaving, and facial care for a polished look.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pricelist-gallery" id="pricelist">
+        <div class="pricelist-container ">
+            <div class="pricelist-content">
+                <h2 class="section-title scroll-animate">Pricelist</h2>
+                <p class="subtitle scroll-animate">
+                    Elevate your style with our exclusive services, featuring special rates for members.
+                </p>
+
+
+                <div class="price-list">
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">The Executive Haircut</span>
+                        <span class="prices">
+                            <span class="price-non-member">$45</span>
+                            <span class="price-member">$35</span>
+                        </span>
+                    </div>
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">Signature Hot Towel Shave</span>
+                        <span class="prices">
+                            <span class="price-non-member">$30</span>
+                            <span class="price-member">$25</span>
+                        </span>
+                    </div>
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">Beard Sculpting & Trim</span>
+                        <span class="prices">
+                            <span class="price-non-member">$25</span>
+                            <span class="price-member">$20</span>
+                        </span>
+                    </div>
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">Deluxe Grooming Package</span>
+                        <span class="prices">
+                            <span class="price-non-member">$80</span>
+                            <span class="price-member">$65</span>
+                        </span>
+                    </div>
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">Scalp Treatment & Massage</span>
+                        <span class="prices">
+                            <span class="price-non-member">$50</span>
+                            <span class="price-member">$40</span>
+                        </span>
+                    </div>
+                    <div class="price-item scroll-animate">
+                        <span class="service-name">Hair Coloring & Style</span>
+                        <span class="prices">
+                            <span class="price-non-member">$120</span>
+                            <span class="price-member">$100</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="legend scroll-animate">
+                    <p>Member Price <span class="member-label"></span></p>
+                    <p>Non-Member Price <span class="non-member-label"></span></p>
+                </div>
+            </div>
+
+            <div class="galleryf-content scroll-animate">
+                <div class="galleryf-images">
+                    <img src="./src/gambar/barber-preview.png" alt="Barbershop suasana mewah"
+                        class="galleryf-img img-1">
+                    <img src="./src/gambar/barber-preview.png" alt="Cukur jenggot dengan gaya"
+                        class="galleryf-img img-2">
+                    <img src="./src/gambar/barber-preview.png" alt="Hasil potongan rambut modern"
+                        class="galleryf-img img-3">
+                    <img src="./src/gambar/barber-preview.png" alt="Detail alat cukur" class="galleryf-img img-4">
+                    <img src="./src/gambar/barber-preview.png" alt="Pelayanan premium barbershop"
+                        class="galleryf-img img-5">
+                    <img src="./src/gambar/barber-preview.png" alt="Interior barbershop klasik"
+                        class="galleryf-img img-6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4 - Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">
+            <h2 class="scroll-animate">Gallery</h2>
+            <p class="scroll-animate" style="font-weight: bold; margin-bottom: 20px;">
+                Discover our collection of signature cuts and barbershop ambiance.
+            </p>
+            <p class="scroll-animate">
+                Each haircut is crafted as a true work of art, combining elegance, comfort, and refined detail.
+                This gallery reflects our commitment to excellence and dedication to delivering the highest level of
+                client satisfaction.
+            </p>
+
+
+        </div>
+
+        <div class="gallery-grid scroll-animate">
+            <div class="gallery-item tall gal-ex" data-aos="zoom-in"><img src="./src/gambar/barber-preview.png"
+                    alt="Style 1"></div>
+            <div class="gallery-item wide" data-aos="zoom-in" data-aos-delay="100"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 2"></div>
+            <div class="gallery-item wp" data-aos="zoom-in" data-aos-delay="200"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 3"></div>
+            <div class="gallery-item phone" data-aos="zoom-in" data-aos-delay="300"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 4"></div>
+            <div class="gallery-item tall gal-ex" data-aos="zoom-in" data-aos-delay="400"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 5"></div>
+            <div class="gallery-item wide" data-aos="zoom-in" data-aos-delay="500"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 6"></div>
+            <div class="gallery-item wp" data-aos="zoom-in" data-aos-delay="600"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 7"></div>
+            <div class="gallery-item phone" data-aos="zoom-in" data-aos-delay="700"><img
+                    src="./src/gambar/barber-preview.png" alt="Style 8"></div>
+        </div>
+    </section>
+
+
+    <!-- Page 6 - Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-container scroll-animate">
+            <!-- Left Content -->
+            <div class="contact-info">
+                <div class="brand-box">
+                    <img src="./src/gambar/logo.png" alt="The Barber Logo" class="brand-logo">
+                    <h2 class="brand" style="white-space: nowrap;">The Barber</h2>
+                </div>
+
+                <p class="description scroll-animate" style="font-family: 'Gloock', serif;">
+                    An exclusive haircut experience, blending refined elegance with ultimate comfort.
+                </p>
+                <div class="hours scroll-animate" style="font-family: 'Great Vibes', cursive;">
+                    <h3>Opening Hours</h3>
+                    <p>Monday – Sunday : 09:00 AM – 09:00 PM</p>
+                </div>
+
+            </div>
+
+            <!-- Right Content -->
+            <div class="contact-map-container scroll-animate">
+                <!-- Social Buttons (outside map box, aligned left) -->
+                <div class="contact-socials">
+                    <a href="mailto:thebarber@email.com" class="social-btn"><i
+                            class="fas fa-envelope scroll-animate"></i></a>
+                    <a href="https://wa.me/628123456789" class="social-btn"><i
+                            class="fab fa-whatsapp scroll-animate"></i></a>
+                    <a href="https://instagram.com/thebarber" class="social-btn"><i
+                            class="fab fa-instagram scroll-animate"></i></a>
+                    <a href="tel:+628123456789" class="social-btn"><i class="fas fa-phone-alt scroll-animate"></i></a>
+                </div>
+
+                <!-- Maps -->
+                <iframe class="scroll-animate"
+                    src="https://maps.google.com/maps?q=solo&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                    height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer scroll-animate" style="font-family: 'Gloock', serif;">
+        <p>&copy; 2025 The Barber. All Right Reserved. Made by MARFH</p>
+    </footer>
+
+
+    <script src="./src/script/script.js"></script>
+</body>
+
+</html>

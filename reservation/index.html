@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Barber | Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/style/reserve_style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <img src="../src/gambar/logo.png" alt="The Barber Logo" class="logo-icon">
+            <span>The Barber</span>
+        </a>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#pricelist">Pricelist</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Tambahan tombol aksi -->
+        <div class="nav-actions">
+            <a href="./reservation" class="btn-reservasi">
+                <i class="fas fa-calendar-check"></i>
+                <p>Reservation</p>
+            </a>
+            <a href="#member" class="btn-member">
+                <i class="fas fa-user"></i>
+                <p>Member</p>
+            </a>
+        </div>
+    </nav>
+
+    <main class="reservation-page">
+        <div class="page-layout">
+            <section class="reservation-form-container">
+                <h1 class="page-title">Book Your Experience</h1>
+                <p class="subtitle">Select your desired service and preferred time slot for a seamless grooming experience.</p>
+                
+                <div class="form-step active" id="step1">
+                    <h2 class="step-title">1. Choose Your Service</h2>
+                    <div class="pricing-list">
+                        </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h2 class="step-title">2. Select Date & Time</h2>
+                    <input type="date" id="reservation-date" class="form-input">
+                    <div class="time-slots">
+                        </div>
+                    <div class="custom-time-section">
+                        <button class="btn btn-custom-time" id="toggle-custom-time">Set Custom Time</button>
+                        <input type="time" id="custom-time-input" class="form-input" style="display:none;">
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-back" onclick="prevStep()">Back</button>
+                        <button class="btn btn-next" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h2 class="step-title">3. Your Details</h2>
+                    <input type="text" id="user-fullname" class="form-input" placeholder="Full Name">
+                    <input type="tel" id="user-phone" class="form-input" placeholder="Phone Number (e.g., +62 812 3456 7890)">
+                    <input type="email" id="user-email" class="form-input" placeholder="Email Address">
+                    <textarea id="user-notes" class="form-input" placeholder="Notes for the Barber (e.g., 'A specific style', 'Sensitive skin')"></textarea>
+                    <div class="button-group">
+                        <button class="btn btn-back" onclick="prevStep()">Back</button>
+                        <button class="btn btn-next" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step4">
+                    <h2 class="step-title">4. Payment</h2>
+                    <p class="payment-instruction">Please select your preferred payment method.</p>
+                    <div class="payment-methods">
+                        <div class="payment-option" data-method="qr">
+                            <i class="fas fa-qrcode"></i>
+                            <span>QR Code</span>
+                        </div>
+                        <div class="payment-option" data-method="digital-app">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Digital App</span>
+                        </div>
+                        <div class="payment-option" data-method="transfer">
+                            <i class="fas fa-university"></i>
+                            <span>Bank Transfer</span>
+                        </div>
+                    </div>
+
+                    <div id="payment-details-container">
+                        </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-back" onclick="prevStep()">Back</button>
+                        <button class="btn btn-submit" onclick="submitReservation()">Confirm Reservation</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step5">
+                    <h2 class="step-title">Reservation Confirmed</h2>
+                    <div class="confirmation-content">
+                        <div class="success-animation">
+                            <i class="fas fa-check-circle animated-check"></i>
+                        </div>
+                        <p class="confirmation-text">Your reservation has been received.</p>
+                        <p class="contact-info">You will receive a confirmation message on your WhatsApp shortly.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="cta-member">
+                <div class="cta-content">
+                    <h2 class="cta-title">Unlock Exclusive Prices</h2>
+                    <p class="cta-text">Become a member today and enjoy special rates on all our premium services, starting with your very first visit.</p>
+                    <button class="btn btn-gold" onclick="window.location.href='#member-info'">Become a Member</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" id="modal-image" alt="Service Image">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="/src/script/reserve_script.js"></script>
+</body>
+
+</html>
